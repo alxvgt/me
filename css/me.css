@@ -1,0 +1,24 @@
+.background-code{
+    z-index: 1000;
+    background: url("../img/me.jpg") center no-repeat;
+    position: fixed;
+}
+.background-overlay{
+    background: radial-gradient(circle, rgba(0,0,0,0.35) 0%, rgba(0,0,0,1) 55%);
+    position: fixed;
+    left: 0;
+    min-height: 100vh;
+    min-width: 100%;
+}
+.top-buffer{
+    padding-top: 20%;
+}
+.my-text{
+    color: white;
+}
+.title{
+    font-size: 50px;
+}
+.social{
+    font-size: 25px;
+}
