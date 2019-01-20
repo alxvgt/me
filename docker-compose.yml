@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+    me:
+        container_name: me
+        image: nginx
+        environment:
+            - VIRTUAL_HOST=me.418.ovh
+            - VIRTUAL_PORT=8002
+        networks:
+            - network-proxy
+        ports:
+            - '8002:80'
+        volumes:
+            - '.:/var/www'
+            - './site/nginx/site.conf:/etc/nginx/conf.d/site.conf'
+networks:
+    network-proxy:
+        external:
+            name: network-proxy

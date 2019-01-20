@@ -12,7 +12,7 @@
 }
 
 .background-overlay {
-    background: radial-gradient(ellipse, rgba(150, 150, 150, 0.45) 0%, rgba(40, 40, 40, 1) 60%);
+    background: radial-gradient(ellipse, rgba(150, 150, 150, 0.45) 0%, rgba(40, 40, 40, 1) 50%);
     position: fixed;
     left: 0;
     min-height: 100vh;
