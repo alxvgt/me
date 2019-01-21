@@ -31,13 +31,13 @@
 
 .title {
     font-family: 'Open Sans Bold', sans-serif;
-    font-size: 90px;
+    font-size: 10vmin;
     letter-spacing: -2px;
 }
 
 .decription {
     font-family: serif;
-    font-size: 23px;
+    font-size: 4vmin;
     color: rgba(210, 210, 210, 1);
 }
 
@@ -48,6 +48,10 @@
 
 .social {
     font-size: 25px;
+}
+
+.fab {
+    font-size: calc(10px + 4vmin);
 }
 
 hr {
