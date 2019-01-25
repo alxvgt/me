@@ -7,6 +7,8 @@ services:
         environment:
             - VIRTUAL_HOST=me.418.ovh
             - VIRTUAL_PORT=8002
+            - LETSENCRYPT_HOST=me.418.ovh
+            - LETSENCRYPT_EMAIL=avingtier@gmail.com
         networks:
             - network-proxy
         ports:
