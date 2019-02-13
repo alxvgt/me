@@ -1,6 +1,4 @@
 window.addEventListener('load', async e => {
-    await fetchTrending();
-
     if ('serviceWorker' in navigator) {
         try {
             navigator.serviceWorker.register('service-worker.js');
