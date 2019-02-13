@@ -1,9 +1,9 @@
 const staticAssets = [
-    './',
-    './css/bootstrap-4.2.1-dist/css/bootstrap.min.css',
-    './fontawesome/css/all.css',
-    './css/me.css',
-    './js/app.js'
+    '../',
+    '../css/bootstrap-4.2.1-dist/css/bootstrap.min.css',
+    '../fontawesome/css/all.css',
+    '../css/me.css',
+    '../js/app.js'
 ];
 
 self.addEventListener('install', async event => {
