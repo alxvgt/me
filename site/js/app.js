@@ -13,6 +13,7 @@ window.addEventListener('load', async e => {
 
 let deferredPrompt;
 const addBtn = document.querySelector('#installer');
+console.log(addBtn);
 window.addEventListener('beforeinstallprompt', (e) => {
     console.log(addBtn);
     console.log('beforeinstallprompt' + 1);
