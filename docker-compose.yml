@@ -11,5 +11,11 @@ services:
         ports:
             - '8002:80'
         volumes:
-            - '.:/var/www'
-            - './site/nginx/site.conf:/etc/nginx/conf.d/site.conf'
+            - '/root/me:/var/www'
+            - '/root/me/site/nginx/site.conf:/etc/nginx/conf.d/site.conf'
+        networks:
+            - shared-proxy
+
+networks:
+    shared-proxy:
+        external: true
