@@ -3,18 +3,19 @@ version: '3'
 services:
     nginx:
         image: nginx
-        environment:
-            - VIRTUAL_HOST=me.418.ovh
-            - VIRTUAL_PORT=8002
-            - LETSENCRYPT_HOST=me.418.ovh
-            - LETSENCRYPT_EMAIL=avingtier@gmail.com
-        ports:
-            - '8002:80'
         volumes:
             - '/root/me:/var/www'
             - '/root/me/site/nginx/site.conf:/etc/nginx/conf.d/site.conf'
+        deploy:
+            labels:
+                - "traefik.enable=true"
+                - "traefik.http.routers.me.rule=Host(`me.418.ovh`)"
+                - "traefik.http.routers.me.tls=true"
+                - "traefik.http.routers.me.tls.certresolver=mytlschallenge"
+                - "traefik.http.services.me.loadbalancer.server.port=80" # it seems you always need to give traefik a port so it 'notices' the service
         networks:
             - shared-proxy
+
 
 networks:
     shared-proxy:
